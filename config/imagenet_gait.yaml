@@ -1,0 +1,26 @@
+# Define params that are constant for every experiment here
+globals:
+  train_network: True
+  nb_epochs: 200
+  max_steps:
+  seed: 1
+  validation: False
+  batch_size: 256
+  dataset_size: 1281167
+  network: 'ImageNet'
+  greyscale: False
+  activation: 'leaky_relu'
+  imagenet_path: '<path_to_imagenet_tfrecords'
+  adam_optimizer: true
+
+exp0:
+  experiment_name: 'ImageNet/ImageNet_GAIT'
+  algorithm: 'GAIT'
+  ortho_reg: 1
+  load_epoch: 0
+  learning_rate: 0.000049
+  beta1: .9
+  beta2: .99
+  epsilon: 1e-8
+  gamma: 1e-7
+  adaptive_gamma: true

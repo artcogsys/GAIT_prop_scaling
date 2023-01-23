@@ -1,0 +1,62 @@
+# Define params that are constant for every experiment here
+globals:
+  train_network: True
+  nb_epochs: 200
+  max_steps:
+  seed: 1
+  validation: False
+  adam_optimizer: true
+  batch_size: 256
+  network: 'CIFAR_shallow'
+  dataset_size: 50000
+  greyscale: False
+  activation: 'leaky_relu'
+  imagenet_path:
+
+exp0:
+  experiment_name: 'CIFAR_SHALLOW/CIFAR_SHALLOW_VANILLA_GAIT'
+  gamma: 1e-3
+  adaptive_gamma: false
+  algorithm: 'GAIT'
+  ortho_reg: 100
+  load_epoch: 0
+  learning_rate: 0.000019
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1e-6
+
+exp1:
+  experiment_name: 'CIFAR_SHALLOW/CIFAR_SHALLOW_NORMALIZED_GAIT'
+  gamma: 1e-7
+  adaptive_gamma: true
+  algorithm: 'GAIT'
+  ortho_reg: 100
+  load_epoch: 0
+  learning_rate: 0.000019
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1e-6
+
+exp2:
+  experiment_name: 'CIFAR_SHALLOW/CIFAR_SHALLOW_FA'
+  algorithm: 'FA'
+  gamma:
+  adaptive_gamma:
+  ortho_reg: 0
+  load_epoch: 0
+  learning_rate: 0.000025
+  beta1: 0.9
+  beta2: 0.99
+  epsilon: 1e-4
+
+exp3:
+  experiment_name: 'CIFAR_SHALLOW/CIFAR_SHALLOW_BP'
+  gamma:
+  adaptive_gamma:
+  algorithm: 'BP'
+  ortho_reg: 0
+  load_epoch: 0
+  learning_rate: 0.000019
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1e-6
